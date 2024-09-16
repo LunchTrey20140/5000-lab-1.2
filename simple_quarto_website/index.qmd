@@ -1,0 +1,94 @@
+---
+title: "simple_quarto_website"
+---
+
+
+
+# Trey's Pumpkin Patch
+**@vandeSchoot2021 says a ton about one of my favorite topics: Bayesian Modeling**
+Lorem ipsum odor amet, consectetuer adipiscing elit. Hendrerit elementum metus orci nisl; duis ultrices tellus. Himenaeos donec lectus natoque dolor cursus a aliquam.[^1] Imperdiet tortor nunc; integer rutrum purus metus. Potenti morbi hac ullamcorper integer lacus blandit commodo. Scelerisque elit semper malesuada sit leo nam. Class convallis class neque netus hendrerit accumsan vivamus imperdiet. @vandeSchoot2021
+
+
+## Personal Stuff (A little about me)
+*Purus suscipit sagittis senectus est etiam integer.* Turpis nam morbi sodales mus laoreet duis. Sagittis malesuada himenaeos ex, hendrerit placerat class. Mi maecenas inceptos eget libero potenti;
+
+- Lorem ipsum odor amet, consectetuer adipiscing elit. Elementum potenti velit maecenas venenatis; placerat senectus. Ad sodales scelerisque curabitur sapien felis. Semper quam libero ultricies dignissim mus justo lectus. Himenaeos diam senectus tempor nisi elementum consequat sapien tellus. Nunc dapibus lacinia diam sem dignissim nisi mus porta porta. Eleifend blandit turpis habitant donec eleifend.
+  - bibendum taciti rutrum neque accumsan hendrerit montes consequat. Afringilla scelerisque senectus dis orci natoque phasellus. Fames pharetra nascetur dis imperdiet mollis fringilla. Donec faucibus vel adipiscing nullam gravida integer parturient:
+- Litora ipsum lobortis tincidunt bibendum eget sed lacinia porta. Velit mollis vivamus sagittis quam mattis tempor diam, nulla nascetur. Luctus litora senectus senectus mus sem; vitae porttitor. Quis
+-  parturient nam finibus id. Quisque porta dictum metus; felis habitant pellentesque. 
+-  Vehicula consectetur gravida quam nulla dictum pretium natoque.
+
+Here's a mermaid flow chart: 
+```{mermaid}
+flowchart LR
+  A[Get Up] --> B(Brush Teeth)
+  B --> C{Decision}
+  C --> D[Make Breakfast]
+  C --> E[Make Bed]
+```
+
+### Stuff from my Thesis
+
+*Taciti tristique nibh primis pharetra pulvinar.* Aliquet odio faucibus litora magna morbi mi lectus bibendum. Magna integer malesuada massa, commodo facilisis vulputate? 
+
+:::{layout-ncol=2}
+Libero curae nisl nisl diam nisi consequat. Fames aliquam habitant potenti convallis vulputate phasellus elementum? Porta parturient sociosqu; nullam sit hac placerat porta arcu vehicula. Gravida nisi ultrices sed massa fringilla magnis efficitur aenean.
+
+Libero curae nisl nisl diam nisi consequat. Fames aliquam habitant potenti convallis vulputate phasellus elementum? Porta parturient sociosqu; nullam sit hac placerat porta arcu vehicula. Gravida nisi ultrices sed massa fringilla magnis efficitur aenean.
+:::
+
+This is from my Undergraduate thesis: 
+
+> "If we let $\theta_c^{(s)}$ be the MCMC sample from iteration s of chain c for parameter $\theta$, and $\theta_c^{(s-\ell)}$ be the MCMC sample from iteration $s-\ell$ of chain c for parameter $\theta$, then we can achieve our effective sample size and autocorrelation from our total number of iterations *S* by Equation:"
+
+$$
+    Ess_c = \frac{N}{1 + 2\sum_{\ell-1}^N\rho_c(\ell)} \newline
+$$
+$$
+\rho_c(\ell) = Cor(\theta_c^{(s)},\theta_c^{(s-\ell)})
+$$
+
+where $\ell$ is the lag of our sample
+
+
+To estimate the significance and uncertainty of my Köppen-Geiger Climate Classification coefficients, I calculated 95% Highest Posterior Density (HPD) Intervals for all model parameters, as seen in the table below. These HPD intervals are the credible intervals ($\ell$, u) such that the width $u - \ell$ is minimized while keeping the desired coverage probability such that P($\ell$ < $\theta$ < u) = .95, but the width of the interval is as small as possible.
+
+|    | Term        | Lower\_Bound | Higher\_Bound |
+|----|-------------|--------------|---------------|
+| 1  | (Intercept) | 13.69        | 13.86         |
+| 2  | XC2         | 0.87         | 0.87          |
+| 3  | CRegionBSk  | -2.08        | -1.91         |
+| 4  | CRegionBWh  | 0.16         | 0.37          |
+| 5  | CRegionBWk  | -0.32        | -0.12         |
+| 6  | CRegionCfa  | -1.90        | -1.73         |
+| 7  | CRegionCfb  | -1.62        | -1.38         |
+| 8  | CRegionCsa  | -1.48        | -1.28         |
+| 9  | CRegionCsb  | -1.87        | -1.70         |
+| 10 | CRegionDfa  | -3.70        | -3.52         |
+| 11 | CRegionDfb  | -2.60        | -2.42         |
+| 12 | CRegionDfc  | -1.74        | -1.54         |
+| 13 | CRegionDsb  | -1.56        | -1.34         |
+| 14 | CRegionDsc  | -0.85        | -0.57         |
+| 15 | CRegionDwa  | -3.50        | -3.15         |
+| 16 | CRegionDwb  | -3.41        | -2.94         |
+| 17 | sigma       | 2.99         | 3.01          |
+| 18 | mean\_PPD   | 11.85        | 11.87         |
+
+
+
+Here are some images
+
+![One picture of Odin, my older sister's dog](images\Odin_1.png)
+
+
+![This dog is basically mine, I raised this chonky boy](images\Odin_2.png)
+
+
+Here's a video from my presentation in Germany
+
+{{< video https://www.youtube.com/watch?v=qhoYJ5NAQm0 >}}
+
+
+[^1]: Sociosqu facilisi interdum pulvinar facilisi ligula aenean nam habitant.
+
+
